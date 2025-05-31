@@ -1,0 +1,44 @@
+/*!
+  * shared v11.1.5
+  * (c) 2025 kazuya kawaguchi
+  * Released under the MIT License.
+  */
+
+/*!
+  * vue-i18n v11.1.5
+  * (c) 2025 kazuya kawaguchi
+  * Released under the MIT License.
+  */
+
+/*!
+  * vue-router v4.5.1
+  * (c) 2025 Eduardo San Martin Morote
+  * @license MIT
+  */
+
+/*! #__NO_SIDE_EFFECTS__ */
+
+/**
+ * @license lucide-vue-next v0.341.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+/**
+* @vue/reactivity v3.5.15
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/runtime-dom v3.5.15
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/shared v3.5.15
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
