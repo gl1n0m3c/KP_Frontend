@@ -1,0 +1,195 @@
+{
+  "app": {
+    "title": "Network Monitor"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "devices": "Devices",
+    "alerts": "Alerts",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Network Dashboard",
+    "subtitle": "Monitor your network infrastructure in real-time",
+    "networkLoad": "Network Load",
+    "recentAlerts": "Recent Alerts",
+    "quickActions": "Quick Actions",
+    "metrics": {
+      "status": "Network Status",
+      "uptime": "Uptime",
+      "ping": "Average Ping",
+      "activeAlerts": "Active Alerts"
+    },
+    "actions": {
+      "refreshAll": "Refresh All",
+      "refreshAllDesc": "Update all device statuses",
+      "runTest": "Run Test",
+      "runTestDesc": "Execute network diagnostics",
+      "settings": "Settings",
+      "settingsDesc": "Configure monitoring",
+      "export": "Export Data",
+
+      "settingsDesc": "Configure monitoring",
+      "export": "Export Data",
+      "exportDesc": "Download network reports"
+    }
+  },
+  "devices": {
+    "title": "Network Devices",
+    "subtitle": "Manage and monitor all devices in your network",
+    "addDevice": "Add Device",
+    "editDevice": "Edit Device",
+    "deviceList": "Device List",
+    "search": "Search",
+    "searchPlaceholder": "Search by name or IP address",
+    "status": "Status",
+    "type": "Type",
+    "allStatuses": "All Statuses",
+    "allTypes": "All Types",
+    "noDevices": "No devices found",
+    "deviceName": "Device Name",
+    "deviceNamePlaceholder": "Enter device name",
+    "ipAddress": "IP Address",
+    "deviceType": "Device Type",
+    "selectType": "Select device type",
+    "refresh": "Refresh",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this device?",
+    "statuses": {
+      "online": "Online",
+      "offline": "Offline",
+      "warning": "Warning"
+    },
+    "types": {
+      "router": "Router",
+      "switch": "Switch",
+      "server": "Server",
+      "workstation": "Workstation"
+    },
+    "table": {
+      "device": "Device",
+      "status": "Status",
+      "type": "Type",
+      "ping": "Ping",
+      "uptime": "Uptime",
+      "lastSeen": "Last Seen",
+      "actions": "Actions"
+    }
+  },
+  "alerts": {
+    "title": "Network Alerts",
+    "subtitle": "Monitor and manage network alerts and notifications",
+    "noAlerts": "No alerts found",
+    "acknowledge": "Acknowledge",
+    "markAllRead": "Mark All as Read",
+    "settings": "Alert Settings",
+    "alertsList": "Alerts List",
+    "critical": "Critical",
+    "warning": "Warning",
+    "info": "Info",
+    "unread": "Unread",
+    "read": "Read",
+    "filterByType": "Filter by Type",
+    "filterByStatus": "Filter by Status",
+    "filterByTime": "Filter by Time",
+    "allTypes": "All Types",
+    "allStatuses": "All Statuses",
+    "allTime": "All Time",
+    "clearFilters": "Clear Filters",
+    "notificationSettings": "Notification Settings",
+    "comingSoon": "Coming Soon",
+    "comingSoonDesc": "Advanced notification features including Email and Telegram integration are coming soon.",
+    "types": {
+      "critical": "Critical",
+      "warning": "Warning",
+      "info": "Info"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Configure your network monitoring preferences",
+    "save": "Save Settings",
+    "saving": "Saving...",
+    "general": {
+      "title": "General Settings",
+      "theme": "Dark Mode",
+      "themeDesc": "Toggle between light and dark themes",
+      "language": "Language",
+      "languageDesc": "Select your preferred language",
+      "autoRefresh": "Auto Refresh",
+      "autoRefreshDesc": "Automatically refresh data at intervals",
+      "disabled": "Disabled",
+      "seconds": "seconds",
+      "minute": "minute",
+      "minutes": "minutes"
+    },
+    "monitoring": {
+      "title": "Monitoring Settings",
+      "pingInterval": "Ping Interval",
+      "pingIntervalDesc": "How often to ping devices",
+      "timeout": "Timeout",
+      "timeoutDesc": "Maximum time to wait for response",
+      "retryCount": "Retry Count",
+      "retryCountDesc": "Number of retries before marking as offline"
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "email": "Email Notifications",
+      "emailDesc": "Receive alerts via email",
+      "emailAddress": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "comingSoon": "Coming Soon",
+      "comingSoonDesc": "Advanced notification features including Email and Telegram integration are coming soon."
+    }
+  },
+  "auth": {
+    "signIn": "Sign in to your account",
+    "signInSubtitle": "Monitor your network infrastructure",
+    "email": "Email address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "signingIn": "Signing in...",
+    "error": "Authentication Error",
+    "loginFailed": "Login failed. Please try again.",
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must be at least 6 characters"
+    }
+  },
+  "user": {
+    "profile": "Profile",
+    "logout": "Sign out"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "time": {
+    "1hour": "Last hour",
+    "24hours": "Last 24 hours",
+    "7days": "Last 7 days"
+  },
+  "chart": {
+    "noData": "No data available"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "goHome": "Go to Dashboard",
+    "goBack": "Go Back"
+  },
+  "common": {
+    "viewAll": "View all",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close"
+  }
+}

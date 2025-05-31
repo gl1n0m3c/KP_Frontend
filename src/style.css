@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Улучшаем читаемость текста на прозрачном фоне */
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+:root {
+  --color-primary: #2F855A;
+  --color-primary-light: #48BB78;
+  --color-primary-dark: #276749;
+  --color-secondary: #9AE6B4;
+  --color-secondary-light: #C6F6D5;
+  --color-secondary-dark: #68D391;
+  --color-background: #F0FFF4;
+  --color-surface: #FFFFFF;
+  --color-text: #1A202C;
+  --color-text-light: #4A5568;
+
+  /* Прозрачные цвета */
+  --color-primary-10: rgba(47, 133, 90, 0.1);
+  --color-primary-20: rgba(47, 133, 90, 0.2);
+  --color-primary-30: rgba(47, 133, 90, 0.3);
+  --color-surface-80: rgba(255, 255, 255, 0.8);
+}
+
+.dark {
+  --color-primary: #48BB78;
+  --color-primary-light: #68D391;
+  --color-primary-dark: #2F855A;
+  --color-secondary: #9AE6B4;
+  --color-secondary-light: #C6F6D5;
+  --color-secondary-dark: #68D391;
+  --color-background: #1A202C;
+  --color-surface: #2D3748;
+  --color-text: #F7FAFC;
+  --color-text-light: #E2E8F0;
+
+  /* Прозрачные цвета для темной темы */
+  --color-primary-10: rgba(72, 187, 120, 0.1);
+  --color-primary-20: rgba(72, 187, 120, 0.2);
+  --color-primary-30: rgba(72, 187, 120, 0.3);
+  --color-surface-80: rgba(45, 55, 72, 0.8);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-primary-10);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-20);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-30);
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-surface-80 backdrop-blur-sm border border-primary-20;
+}
+
+.glass-dark {
+  @apply dark:bg-surface-80 dark:backdrop-blur-sm dark:border-primary-20;
+}
+
+/* Card styles */
+.card {
+  @apply glass glass-dark shadow-lg rounded-lg p-6 transition-all duration-300;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200
+         focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-dark
+         dark:bg-primary dark:hover:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-primary hover:bg-secondary-dark
+         dark:bg-secondary dark:hover:bg-secondary-dark;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white
+         dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-white;
+}
+
+/* Input styles */
+.input {
+  @apply glass glass-dark px-4 py-2 rounded-md
+         focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Animation utilities */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-all duration-200 hover:shadow-lg hover:shadow-primary;
+}
+
+/* Responsive container */
+.container-responsive {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Focus styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Dark mode improvements */
+.dark {
+  color-scheme: dark;
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Button focus states */
+button:focus-visible,
+a:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Form input focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  @apply outline-none ring-2 ring-blue-500 border-blue-500;
+}
+
+/* Responsive text */
+@media (max-width: 640px) {
+  .text-responsive {
+    @apply text-sm;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
