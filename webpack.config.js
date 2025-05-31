@@ -9,6 +9,9 @@ import autoprefixer from "autoprefixer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const isProduction = process.env.NODE_ENV === "production";
+const publicPath = isProduction ? "/network/" : "/";
+
 export default {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: "./src/main.ts",
@@ -16,6 +19,7 @@ export default {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
     clean: true,
+    publicPath: publicPath,
   },
   resolve: {
     extensions: [".ts", ".js", ".vue", ".json"],
@@ -66,6 +70,7 @@ export default {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: "./index.html",
+      publicPath: publicPath,
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
@@ -74,7 +79,9 @@ export default {
   devServer: {
     static: "./dist",
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: publicPath,
+    },
     port: 5173,
   },
   optimization: {

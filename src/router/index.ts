@@ -1,5 +1,12 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router"
-import store from "@/store"
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
+import store from "@/store";
+
+const isProduction = process.env.NODE_ENV === "production";
+const baseUrl = isProduction ? "/network/" : "/";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -41,24 +48,24 @@ const routes: Array<RouteRecordRaw> = [
     name: "NotFound",
     component: () => import("@/views/NotFound.vue"),
   },
-]
+];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(baseUrl),
   routes,
-})
+});
 
 // Navigation guards
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = store.getters["auth/isAuthenticated"]
+  const isAuthenticated = store.getters["auth/isAuthenticated"];
 
   if (to.meta.requiresAuth && !isAuthenticated) {
-    next("/login")
+    next("/login");
   } else if (to.meta.requiresGuest && isAuthenticated) {
-    next("/dashboard")
+    next("/dashboard");
   } else {
-    next()
+    next();
   }
-})
+});
 
-export default router
+export default router;
