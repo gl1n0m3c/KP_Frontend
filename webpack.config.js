@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const isProduction = process.env.NODE_ENV === "production";
-const publicPath = isProduction ? "/network/" : "/";
+const publicPath = isProduction ? "/KP_Frontend/" : "/";
 
 export default {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
